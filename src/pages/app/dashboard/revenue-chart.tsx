@@ -1,4 +1,11 @@
-import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from 'recharts'
+import {
+  CartesianGrid,
+  Line,
+  LineChart,
+  ResponsiveContainer,
+  XAxis,
+  YAxis,
+} from 'recharts'
 import colors from 'tailwindcss/colors'
 
 import {
@@ -11,10 +18,12 @@ import {
 
 const data = [
   { date: '10/12', revenue: 1200 },
-  { date: '11/12', revenue: 800 },
+  { date: '11/12', revenue: 1600 },
   { date: '12/12', revenue: 950 },
   { date: '13/12', revenue: 2300 },
-  { date: '14/12', revenue: 640 },
+  { date: '14/12', revenue: 1200 },
+  { date: '15/12', revenue: 780 },
+  { date: '16/12', revenue: 2000 },
 ]
 
 export function RevenueChart() {
@@ -43,7 +52,11 @@ export function RevenueChart() {
                 })
               }
             />
+
             <XAxis dataKey="date" tickLine={false} axisLine={false} dy={16} />
+
+            <CartesianGrid className="stroke-muted" vertical={false} />
+
             <Line
               type="linear"
               strokeWidth={2}
