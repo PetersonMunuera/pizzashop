@@ -2,6 +2,7 @@ import {
   DialogContent,
   DialogDescription,
   DialogHeader,
+  DialogTitle,
 } from '@/components/ui/dialog'
 import {
   Table,
@@ -16,8 +17,10 @@ import {
 export function OrderDetails() {
   return (
     <DialogContent>
-      <DialogHeader>Pedido: 98u9a8jf9sasdsfg</DialogHeader>
-      <DialogDescription>Detalhes do pedido</DialogDescription>
+      <DialogHeader>
+        <DialogTitle>Pedido: 98u9a8jf9sasdsfg</DialogTitle>
+        <DialogDescription>Detalhes do pedido</DialogDescription>
+      </DialogHeader>
 
       <div className="space-y-6">
         <Table>
